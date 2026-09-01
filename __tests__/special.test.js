@@ -1,19 +1,24 @@
 import { extractSpecialAttack } from '../src/js/special.js';
 
-test('extracts special attacks and supplies default description', () => {
+test('test_1', () => {
   const character = {
     name: 'Лучник',
+    type: 'Bowman',
+    health: 50,
+    level: 3,
+    attack: 40,
+    defence: 10,
     special: [
       {
         id: 8,
         name: 'Двойной выстрел',
-        icon: 'double-shot.png',
-        description: 'Двойной урон',
+        icon: 'http://...',
+        description: 'Двойной выстрел наносит двойной урон',
       },
       {
         id: 9,
         name: 'Нокаутирующий удар',
-        icon: 'knockout.png',
+        icon: 'http://...',
       },
     ],
   };
@@ -22,14 +27,14 @@ test('extracts special attacks and supplies default description', () => {
     {
       id: 8,
       name: 'Двойной выстрел',
-      description: 'Двойной урон',
-      icon: 'double-shot.png',
+      icon: 'http://...',
+      description: 'Двойной выстрел наносит двойной урон',
     },
     {
       id: 9,
       name: 'Нокаутирующий удар',
       description: 'Описание недоступно',
-      icon: 'knockout.png',
+      icon: 'http://...',
     },
   ]);
 });
